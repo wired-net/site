@@ -1,0 +1,375 @@
+/* ========================================
+   FONTS
+   These load custom fonts for your site
+   You need font files in a "fonts" folder
+   ======================================== */
+@font-face {
+	font-family: "terminal"; 
+	src: url("fonts/terminal-grotesque_open.otf") format("opentype");
+}
+@font-face {
+	font-family: "degheest"; 
+	src: url("fonts/Director-Regular.woff") format("woff");
+}
+
+/* ========================================
+   SMOOTH SCROLLING
+   Makes page scroll smoothly instead of jumping
+   ======================================== */
+html {
+	scroll-behavior: smooth;
+}
+
+/* ========================================
+   BODY (whole page background and text)
+   ======================================== */
+body { 
+	/* FONT: Change "degheest" to "Arial" or "Times New Roman" for standard fonts */
+	font-family: "degheest", serif; 
+	
+	margin: 0;
+	padding: 0;
+	
+	/* BACKGROUND: Change colors or use a solid color
+	   Solid color example: background: #E0E2DB;
+	   Image example: background: url("yourimage.jpg");
+	   Current: gray-to-beige gradient from left to right */
+	background: linear-gradient(to right, #cfc2c2, #E0E2DB, #E0E2DB, #E0E2DB, #E0E2DB, #E0E2DB);
+	
+	/* TEXT COLOR: Change #2E3532 to any color
+	   Examples: black = #000000, white = #FFFFFF */
+	color: #2E3532;
+	
+	/* ========================================
+	   CUSTOM CURSOR
+	   Add this line to change cursor style:
+	   ======================================== */
+	/* cursor: pointer; (hand with finger)
+	   cursor: crosshair; (plus sign)
+	   cursor: help; (question mark)
+	   cursor: wait; (loading circle)
+	   cursor: grab; (open hand)
+	   cursor: url("yourcursor.png"), auto; (custom image) */
+}
+
+/* ========================================
+   SCROLLBAR COLORS
+   ======================================== */
+* { 
+	box-sizing: border-box;
+	/* SCROLLBAR: thumb is the moving part, track is background */
+	scrollbar-color: #8B2635 #E0E2DB;
+}
+
+/* For Chrome, Safari, Edge browsers */
+*::-webkit-scrollbar { 
+	width: 15px; /* Scrollbar width */
+}
+*::-webkit-scrollbar-track { 
+	background: #E0E2DB; /* Background color */
+}
+*::-webkit-scrollbar-thumb { 
+	background-color: #8B2635; /* Moving part color */
+	border: transparent; 
+}
+
+/* ========================================
+   IMAGES
+   Makes sure images don't get too big
+   ======================================== */
+img { max-width: 100% }
+
+/* ========================================
+   NAVIGATION MENU (links at top)
+   ======================================== */
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: right;
+	justify-content: right;
+}
+
+/* ========================================
+   MAIN CONTENT AREA
+   ======================================== */
+main {
+	margin: 10px auto;
+	max-width: 60rem; /* Maximum width of content */
+}
+
+/* ========================================
+   SECTION BOXES (boxes with borders)
+   ======================================== */
+section {
+	margin: 2em auto;
+	padding: 1em 2em;
+	
+	/* BORDERS: Change style, color, or remove
+	   Styles: solid, dashed, dotted, double
+	   Colors: change #A9ABA1 to any color */
+	border: 1px dashed #A9ABA1;
+	outline: 1px dotted #A9ABA1;
+	outline-offset: 5px;
+	
+	max-width: calc(100% - 10px);
+}
+
+/* ========================================
+   NAVIGATION LINKS & BACK TO TOP BUTTON
+   ======================================== */
+nav a, .up a {
+	/* LINK COLOR: Change #8B2635 to any color */
+	color: #8B2635;
+	
+	display: block;
+	border: 1px #8B2635 solid;
+	margin: 10px;
+	padding: 20px 5px 2px 50px;
+	text-decoration: none;
+	
+	/* LINK SIZE: Change 30px to make bigger/smaller */
+	font-size: 30px;
+	
+	background-color: rgb(0,0,0,0);
+}
+
+/* ========================================
+   HORIZONTAL LINE (divider)
+   ======================================== */
+hr {
+	border: none;
+	border-top: 1px solid #2E3532;
+}
+
+/* ========================================
+   HEADER (top section with site name)
+   ======================================== */
+header {
+	/* HEADER SIZE: Change 50px for bigger/smaller */
+	font-size: 50px;
+	
+	margin: 10px;
+	display: flex;
+	justify-content: space-between;
+	
+	/* HEADER FONT: Change to match body or different font */
+	font-family: 'terminal';
+	font-weight: normal;
+	
+	/* HEADER COLOR: Change #8B2635 to any color */
+	color: #8B2635;
+	
+	max-width: calc(100% - 20px);
+}
+
+/* Site name shadow effect */
+header div { 
+	margin: 20px 10px 0 20px; 
+	/* TEXT SHADOW: remove this line for no shadow */
+	text-shadow: 3px 3px #A9ABA1; 
+}
+
+/* ========================================
+   SPACING for headings, paragraphs, tables
+   ======================================== */
+h1, h2, h3, h4, h5, h6, p, table, details, cite, pre, blockquote {
+	margin: 1rem 0;
+}
+
+/* ========================================
+   HEADING & LINK FONTS
+   ======================================== */
+h1, h2, h3, a { 
+	font-family: 'terminal'; 
+	font-weight: normal; 
+}
+
+/* ========================================
+   LINKS (clickable text)
+   ======================================== */
+a { 
+	/* LINK COLOR: Change #8B2635 to any color */
+	color: #8B2635; 
+	padding: 2px 4px; 
+	
+	/* LINK SIZE: Change 1.25em for bigger/smaller */
+	font-size: 1.25em; 
+}
+
+/* LINK HOVER (when you put mouse over link)
+   Change colors for different hover effect */
+a:hover { 
+	background-color: #8B2635;
+	color: #E0E2DB;
+}
+
+/* ========================================
+   LISTS (bullets and numbers)
+   ======================================== */
+ul, ol {
+	margin: 1rem 0 1rem 1.5rem;
+}
+
+/* Nested lists (lists inside lists) */
+ul ul, ol ol { 
+	margin: 0 0 0 2rem;
+}
+
+/* ========================================
+   TEXT & LIST SIZE
+   ======================================== */
+p, table, ul, ol, dl {
+	/* TEXT SIZE: Change 1rem for bigger/smaller */
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+/* ========================================
+   HEADING SIZES (biggest to smallest)
+   Change the numbers to make bigger/smaller
+   ======================================== */
+h1 { font-size: 3.75em; text-align: center; }
+h2 { font-size: 3em; }
+h3 { font-size: 2.5em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+
+/* ========================================
+   QUOTE BOX (blockquote)
+   ======================================== */
+blockquote {
+	/* LEFT BORDER: Change color or thickness */
+	border-left: #8B2635 3px solid;
+	padding: 0 1rem;
+}
+
+cite { 
+	display: block;
+	text-align: right;
+}
+
+/* ========================================
+   CODE BLOCKS
+   ======================================== */
+code, pre {
+	/* CODE COLORS: Change background and text color */
+	background-color: #2E3532;
+	color: #E0E2DB;
+}
+
+code { 
+	font-family: 'Courier New', monospace; 
+	padding: 2px 4px;
+}
+
+pre { 
+	padding: 1em;
+	overflow-x: auto; /* Adds scroll if code is too wide */
+}
+
+/* ========================================
+   TABLES
+   ======================================== */
+table {	
+	/* TABLE BORDER: Change color or thickness
+	   Change #2E3532 to any color
+	   Change 3px to make thicker/thinner */
+	border: 3px solid #2E3532; 
+	margin: 1rem auto; 
+}
+
+/* Table cells and headers */
+tr, td, th { 
+	border: 1px solid #2E3532; 
+}
+
+td, th { 
+	/* CELL PADDING: Space inside cells
+	   Change 0.5rem for more/less space */
+	padding: 0.5rem 
+}
+
+/* ========================================
+   EXPANDABLE SECTIONS (details/summary)
+   ======================================== */
+details { 
+	border: 1px solid; 
+	padding: 1em;
+}
+
+details p { 
+	margin: 0.5rem 0 0 2rem; 
+}
+
+/* ========================================
+   FOOTER (bottom of page)
+   ======================================== */
+footer { 
+	font-size: 0.8em;
+	text-align: center; 
+	padding: 5px 10px;
+	margin: 2rem;
+}
+
+/* ========================================
+   BACK TO TOP BUTTON
+   ======================================== */
+.up { 
+	position: fixed; /* Stays in corner when scrolling */
+	bottom: 10px; 
+	right: 10px; 
+}
+
+/* ========================================
+   FLEX BOX (side-by-side sections)
+   ======================================== */
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+	padding: 0;
+	align-items: flex-start;
+}
+
+.flex-box section {
+	margin: 1em;
+}
+
+/* WIDTH OPTIONS for side-by-side sections */
+.full { flex: 1 1 100%; } /* Full width */
+.half { flex: 1 1 calc(50% - 2em); } /* Half width */
+.third { flex: 1 1 calc(33% - 2em); } /* One third */
+.twothird { flex: 1 1 calc(66% - 2em); } /* Two thirds */
+.quarter { flex: 1 1 calc(25% - 2em); } /* Quarter */
+.threequarter { flex: 1 1 calc(75% - 2em); } /* Three quarters */
+
+/* ========================================
+   MOBILE/TABLET VIEW
+   Changes layout for smaller screens
+   DON'T DELETE - makes site work on phones
+   ======================================== */
+@media screen and (max-width: 1270px){
+	.up { position: static; width: fit-content; margin: 10px auto; }
+}
+
+@media screen and (max-width: 700px){
+	header { flex-wrap: wrap; }
+	header div { margin: 5px; }
+	nav a {
+		margin: 5px;
+		padding: 15px 5px 2px 30px;
+		text-decoration: none;
+		font-size: 24px;
+	}
+	section {
+		margin: 1em auto;
+		padding: 0.5em 1em;
+	}
+	ul, ol {
+		margin: 1rem 0 1rem 0.5rem;
+	}
+	ul ul, ol ol { 
+		margin: 0 0 0 1rem;
+	}
+}
